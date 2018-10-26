@@ -9,6 +9,7 @@ import java.nio.file.*;
 
 public class TestONNXLoading{
    LoadModelONNX chest_model =  new LoadModelONNX("chexnet-py.onnx");
+   System.out.println("Model loaded")
 
    @Test
    public void testModelLoaded(){
