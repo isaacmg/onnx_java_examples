@@ -6,7 +6,7 @@ public class LoadModelONNX {
         OpSchemaVector allSchemas = OpSchemaRegistry.get_all_schemas();
         System.out.println(allSchemas.size());
         try{
-            byte[] bytes = Files.readAllBytes(Paths.get("examples/resources/single_relu.onnx"));
+            byte[] bytes = Files.readAllBytes(Paths.get(weight_path));
             ModelProto model = new ModelProto();
 
             ParseProtoFromBytes(model, new BytePointer(bytes), bytes.length);
