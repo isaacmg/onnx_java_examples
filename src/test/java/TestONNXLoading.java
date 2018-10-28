@@ -3,7 +3,7 @@ import org.junit.Test;
 
 import static org.bytedeco.javacpp.onnx.*;
 import static org.junit.Assert.assertEquals;
-
+import org.datavec.image.loader.NativeImageLoader;
 import java.nio.file.*;
 
 
