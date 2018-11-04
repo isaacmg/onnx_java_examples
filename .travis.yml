@@ -1,5 +1,6 @@
 
 dist: "trusty"
+sudo: required
 language: java
 addons:
   apt:
@@ -8,7 +9,7 @@ addons:
       - "python3-pip"
 
 before_install:
-  - pip3 install jep
+  - sudo pip3 install jep
   - mvn -U -q clean install
 
 jdk:
