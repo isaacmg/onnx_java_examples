@@ -10,6 +10,7 @@ addons:
 
 before_install:
   - sudo pip3 install jep
+  - pip3 show jep | grep Location
   - mvn -U -q clean install
 
 jdk:
