@@ -1,6 +1,6 @@
 language: java
 before_install:
-  - pip install jep
+  - pip3 install jep
   - mvn -U -q clean install
 jdk:
   - oraclejdk8
