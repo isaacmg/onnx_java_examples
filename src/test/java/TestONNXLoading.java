@@ -36,9 +36,10 @@ public class TestONNXLoading{
 
 
    }
+   @ Test
 
    public void testPrediction(){
-       LoadModelONNX chest_model =  new LoadModelONNX("chexnet-py.onnx");
+       ONNXJep theLoader = new ONNXJep("s","s");
 
    }
 
