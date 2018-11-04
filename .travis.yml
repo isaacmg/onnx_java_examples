@@ -10,7 +10,7 @@ addons:
 before_install:
   - sudo pip3 install jep
   - pip3 show jep | grep Location
-  - cp /usr/local/lib/python3.4/dist-packages/jep/{jep-3.7.1.jar,libjep.so} /lib
+  - sudo cp /usr/local/lib/python3.4/dist-packages/jep/libjep.so /lib
   - mvn -U -q clean install 
 
 env:
