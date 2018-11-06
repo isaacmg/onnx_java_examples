@@ -26,7 +26,7 @@ before_install:
   - conda create -q -n test-environment python=$TRAVIS_PYTHON_VERSION 
   - source activate test-environment
   - pip install --quiet --upgrade pip
-  - pip install allennlp 
+  - pip install --quiet allennlp 
 
 env:
   - LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libpython3.7m.so.1.0, JAVA_OPTS=Djava.library.path=/usr/local/lib/python3.4/dist-packages/jep
