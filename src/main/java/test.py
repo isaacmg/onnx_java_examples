@@ -7,3 +7,4 @@ class SemanticModel():
         result = self.predictor.predict(sentence=text)
         return result
 
+#sudo cp anaconda/lib/python3.6/site-packages/jep/libjep.so /lib
