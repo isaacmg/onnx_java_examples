@@ -6,7 +6,7 @@ public class ONNXJep {
         try{
             // Load Jep
             Jep jep = new Jep();
-            jep.eval("from test.py import SemanticModel");
+            jep.eval("from test import SemanticModel");
             jep.eval("t = SemanticModel()");
             jep.set("arg", "his name is jeff");
             jep.eval("t.predict(arg)");
