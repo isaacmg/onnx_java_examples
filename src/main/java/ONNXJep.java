@@ -15,6 +15,8 @@ public class ONNXJep {
 
         }
         catch(Exception e){
+            e.printStackTrace();
+
 
         }
 
