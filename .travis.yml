@@ -21,11 +21,11 @@ before_install:
   # Replace dep1 dep2 ... with your dependencies
   - conda create -q -n test-environment python=3.7.1
   - source activate test-environment
-  - sudo pip install --quiet jep 
-  - pip show jep
+  - sudo pip3 install --quiet jep 
+  - pip3 show jep
   - sudo cp /usr/local/lib/python3.7/dist-packages/jep/libjep.so /lib
-  - pip install --quiet --upgrade pip
-  - pip install --quiet allennlp 
+  - pip3 install --quiet --upgrade pip
+  - pip3 install --quiet allennlp 
   - mvn -U -q clean install 
 
 env:
