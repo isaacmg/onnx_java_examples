@@ -22,7 +22,7 @@ before_install:
   - conda create -q -n test-environment python=3.7.1
   - source activate test-environment
   - sudo pip install --quiet jep 
-  - sudo cp /usr/local/lib/python3.4/dist-packages/jep/libjep.so /lib
+  - sudo cp /usr/local/lib/python3.7/dist-packages/jep/libjep.so /lib
   - pip install --quiet --upgrade pip
   - pip install --quiet allennlp 
   - mvn -U -q clean install 
