@@ -20,7 +20,7 @@ before_install:
   - pip show jep | grep Location
   #- sudo cp $HOME/miniconda/bin/python3.7/site-packages/jep/libjep.so /lib
   #- pip3 install --quiet --upgrade pip
-  - pip install allennlp 
+  - pip install --quiet allennlp 
   - mvn -U -q clean install 
 
 env:
