@@ -11,9 +11,10 @@ public class ONNXJep {
             jep.eval("sys.argv  = ['']");
             jep.eval("from allennlp.predictors.predictor import Predictor");
             jep.eval("the_pred = Predictor.from_path(\"https://s3-us-west-2.amazonaws.com/allennlp/models/srl-model-2018.05.25.tar.gz\")");
-            
-            jep.eval("filename = os.path.realpath('.')");
-            Object result1 = jep.getValue("filename");
+            String name = "My name is Jeff, this is my club";
+            jep.set("text", name );
+            jep.eval("val = the_pred.predict(text)");
+            Object result1 = jep.getValue("val");
 
             System.out.println(result1);
 
