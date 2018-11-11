@@ -2,11 +2,6 @@
 dist: "trusty"
 sudo: required
 language: java
-addons:
-  apt:
-    packages:
-      - "python3"
-      - "python3-pip"
 before_install:
   - VERBOSE=0
   - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
@@ -25,7 +20,7 @@ before_install:
   - pip3 show jep | grep Location
   #- sudo cp $HOME/miniconda/bin/python3.7/site-packages/jep/libjep.so /lib
   #- pip3 install --quiet --upgrade pip
-  - pip3 install -U setuptools
+  - pip3 install -U --quiet setuptools
   - pip3 install allennlp 
   - mvn -U -q clean install 
 
