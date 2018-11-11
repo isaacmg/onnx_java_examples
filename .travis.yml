@@ -18,16 +18,16 @@ before_install:
   - source activate test-environment
   - pip install --quiet jep 
   - pip show jep | grep Location
-  - sudo cp $HOME/miniconda/lib/python3.7/site-packages/jep/libjep.so /lib
+  - sudo cp $HOME/miniconda/envs/test-environment/lib/python3.7/site-packages/jep/libjep.so /lib
   #- pip3 install --quiet --upgrade pip
   - pip install --quiet allennlp 
   - mvn -U -q clean install 
 
 env:
-  - LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libpython3.7m.so.1.0, JAVA_OPTS=Djava.library.path=$HOME/miniconda/bin/python3.7/site-packages/jep
+  - LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libpython3.7m.so.1.0, JAVA_OPTS=Djava.library.path=$HOME/miniconda/envs/test-environment/python3.7/site-packages/jep
 
 jdk:
   - oraclejdk8
 
 script:
-  mvn -Djava.library.path=$HOME/miniconda/bin/python3.7/site-packages/jep test 
+  mvn -Djava.library.path=$HOME/miniconda/envs/test-environment/lib/python3.7/site-packages/jep test 
